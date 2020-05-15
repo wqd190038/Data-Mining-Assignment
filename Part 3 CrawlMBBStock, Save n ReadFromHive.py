@@ -50,3 +50,8 @@ DFStock2 = DFStock
 with engine.connect as con:
     DFStock2 = pd.read_sql("SELECT * FROM mbb", con)
 
+print(DFStock2.describe)
+
+print(DFStock2.isnull().sum())
+
+print(DFStock2.dtypes)
